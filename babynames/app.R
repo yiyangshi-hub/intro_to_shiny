@@ -4,8 +4,11 @@
 
 library(shiny)
 library(tidyverse)
-library(babynames)
+library(covid19)
 
-ui <- fluidPage("make some change")
+ui <- fluidPage( 
+  selectInput("state", 
+              "State", 
+              choices = state))
 server <- function(input, output) {}
 shinyApp(ui = ui, server = server)
